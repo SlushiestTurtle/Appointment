@@ -68,7 +68,7 @@ namespace AppointmentsTest
         int GetId()
         {
             Random rnd = new Random();
-            return rnd.Next();
+            return rnd.Next(10);
         }
     }
 }
