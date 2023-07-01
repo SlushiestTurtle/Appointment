@@ -45,11 +45,11 @@ namespace AppointmentsTest
 
         [Theory]
         [MemberData(nameof(GetAppointments))]
-        public void AddNewAppointmentToList(Appointment appointment)
+        public void AddNewAppointmentToList(Appointment[] appointments)
         {
             list.Add(new Appointment { Id = 4, Title = "Shopping", Description = "Shopping with dad", BookDate = new DateTime(2023, 06, 26, 16, 45, 0), Priority = Appointments.Extra.Priority.Medium });
             
-            if (appointment == null)
+            if (appointments == null)
             {
                 throw new ArgumentNullException();
             }
@@ -60,8 +60,12 @@ namespace AppointmentsTest
                 rnd = GetId();
                 uniqueId = ControlId(rnd);
             }
-            appointment.Id = rnd;
-            list.Add(appointment);
+            foreach (var appointment in appointments)
+            {
+                appointment.Id = rnd;
+            }
+            
+            list.Add(appointments);
 
             Assert.Equal(4, list.Count);
         }
