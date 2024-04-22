@@ -20,16 +20,18 @@ namespace Appointments.Controllers
         public IEnumerable<Appointment> Get()
         {
             var listOfAppointments = _appointmentService.GetAppointments();
-
             return listOfAppointments;
         }
-
-
-
-
-        public IActionResult Index()
+        [HttpGet(Name = "FindAppointment")]
+        public Appointment Get(int id)
         {
-            return View();
+            var appointment = _appointmentService.GetAppointment(id);
+            return appointment;
         }
+
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

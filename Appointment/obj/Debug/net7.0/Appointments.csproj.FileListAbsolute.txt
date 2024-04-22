@@ -25,9 +25,10 @@ C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\staticw
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\scopedcss\bundle\Appointments.styles.css
-C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointments.csproj.CopyComplete
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointments.dll
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\refint\Appointments.dll
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointments.pdb
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointments.genruntimeconfig.cache
 C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\ref\Appointments.dll
+C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointments.sourcelink.json
+C:\Users\tony_\Documents\GitHub\Appointment\Appointment\obj\Debug\net7.0\Appointm.A0517ACA.Up2Date

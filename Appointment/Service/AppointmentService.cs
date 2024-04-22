@@ -15,13 +15,29 @@ namespace Appointments.Service
             this.repository = repository;
             this.idGenerator = idGenerator;
         }
-        public void DeleteAppointment(Appointment appointment)
+
+        public IEnumerable<Appointment> GetAppointments()
         {
-            if (appointment == null)
+            var appointments = repository.GetList();
+            if (appointments == null)
             {
                 throw new ArgumentNullException();
             }
-            repository.RemoveAppointment(appointment);
+            return appointments;
+        }
+
+        public Appointment GetAppointment(int id)
+        {
+            if (id == 0)
+            {
+                throw new ArgumentException("Id is 0.");
+            }
+            var appointment = repository.GetAppointment(id);
+            if (appointment == null)
+            {
+                throw new ArgumentNullException("id is null.");
+            }
+            return appointment;
         }
 
         public void AddAppointment(Appointment appointment)
@@ -40,15 +56,13 @@ namespace Appointments.Service
             appointment.Id = rnd;
             repository.AddAppointment(appointment);
         }
-
-        public IEnumerable<Appointment> GetAppointments()
+        public void DeleteAppointment(Appointment appointment)
         {
-            var appointments = repository.GetList();
-            if (appointments == null)
+            if (appointment == null)
             {
                 throw new ArgumentNullException();
             }
-            return appointments;
+            repository.RemoveAppointment(appointment);
         }
 
         public void UpdateAppointment(Appointment appointment)

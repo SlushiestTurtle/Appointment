@@ -16,6 +16,11 @@ namespace Appointments.Repository
             return appointments;
         }
 
+        public Appointment GetAppointment(int id)
+        {
+            return appointments[id];
+        }
+
         public void AddAppointment(Appointment appointment)
         {
             appointments.Add(appointment);
